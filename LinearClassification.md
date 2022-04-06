@@ -22,7 +22,7 @@
 tf.keras.layers.Dense(output_size)
 ```
 
-> In order to implement this model we actually have two new layer objects in which first one is kind of dummy object. Then create list of those objects and pass that list in to the keras model `Sequential` object.
+> In order to implement this model we actually need to have two new layer objects, in which first one is kind of dummy object. Then create list of those objects and pass that list in to the keras model `Sequential` object.
 
 
 ```python
@@ -58,7 +58,7 @@ model = tf.keras.models.Sequential([
 ```python
 model.compile(
     optimizer='adam',
-    lost='binary_crossentropy',
+    loss='binary_crossentropy',
     metrics=['accuracy']
 )
 ```
@@ -85,6 +85,6 @@ r = model.fit(
 > We can determine the number of epochs with this reutrned data.
 
 ```python
-plt.plot(r.history['lost'], label='loss')
+plt.plot(r.history['loss'], label='loss')
 plt.plot(r.history['val_lost'], label='val_loss')
 ```
